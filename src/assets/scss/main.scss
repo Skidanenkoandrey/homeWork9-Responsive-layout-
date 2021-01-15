@@ -56,8 +56,80 @@ body {
 .linear-bg-wrapper {
   background: linear-gradient(270deg, #FFFFFF 5.16%, rgba(255, 255, 255, 0) 67.14%, rgba(255, 255, 255, 0.5)),
   url("../../assets/img/technical-property-bg.png") no-repeat left top;
+  background-size: 50%;
 }
 
 .circle-bg-wrapper {
   background: url("../../assets/img/ux-friendly.svg") no-repeat right top;
 }
+
+.features-bg-wrapper {
+  background: url("../../assets/img/features-bg.png") no-repeat;
+  background-size: cover;
+}
+
+.footer-wrapper {
+  background: #00ADEE;
+}
+
+.ux-friendly__circle_notification {
+  display: none;
+}
+
+.ux-friendly__icon_download {
+ width: 28px;
+}
+
+.ux-friendly__icon_notification {
+  width: 36px;
+}
+
+.ux-friendly__icon_cart {
+  width: 27px;
+}
+
+.example-icon {
+  fill: black;
+}
+
+
+.icon {
+  fill: var(--bs-white);
+}
+
+.features svg {
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  height: 200px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.social-network__icon {
+  max-width: 15px;
+}
+

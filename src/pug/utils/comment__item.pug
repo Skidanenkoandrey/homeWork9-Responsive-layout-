@@ -1,0 +1,16 @@
+mixin comment (avatar, name, text)
+    .comments__item
+        .row
+            .col-1
+                img.comments__avatar(
+                    src=avatar
+                )
+
+            .col-10
+                h3.comments__name=name
+            .col-1
+                img.twitter(
+                    src="assets/img/twitter.svg"
+                )
+        .row
+            p.comments__text=text
