@@ -115,6 +115,10 @@ module.exports = {
                     to: `${PATHS.assets}fonts`
                 },
                 {
+                    from: `${PATHS.src}/${PATHS.assets}video`,
+                    to: `${PATHS.assets}video`
+                },
+                {
                     from: `${PATHS.src}/static`,
                     to: ''
                 }

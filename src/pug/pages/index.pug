@@ -147,8 +147,8 @@ block header
                         img.logo__img(
                             src="assets/img/logo.svg"
                         )
-            .row.row-bottom-header
-                .col.col-header__content
+            .row
+                .col.header__content
                     h1.header__title Get a personalized football experience tailored just for you
                     p.header__description Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
                     .application-store
@@ -168,52 +168,81 @@ block main
     .container-fluid.linear-bg-wrapper
         section.technical-properties.container
             .row
-                .col-md-6
+                .col-md-6.notification-col
                     article.notification
-                        .row
+                        .row.row-notification__top
                             .col-6
                                 time.notification__time Sat, 12:35pm
                                 p.notification__teams Arsenal v Chelsea
-                                p.purpose__match Friendly Match
-                            .col-6
-                                img.team-emblem(
+                                p.notification__match Friendly Match
+                            .col-6.notification-emblems
+                                img.notification-emblems__item(
                                     src="assets/img/arsenal-fc.png"
                                 )
-                                img.team-emblem(
+                                img.notification-emblems__item(
                                     src="assets/img/chelsea-fc.png"
                                 )
 
-                        .row
+                        .row.row-notification__bottom
                             .col
-                                .form-check.form-switch.notification-switch
+                                .form-check.form-switch.notification-switch.notification-switch_revers
                                     input.form-check-input(
                                         type="checkbox"
                                         id="flexSwitchCheckDefault"
                                     )
                                     label.form-check-label(
                                         for="flexSwitchCheckDefault"
-                                    ) Default switch checkbox input
+                                    ) Turn on all match notifications
+                    video.player(
+                        controls
+                    )
+                        source(
+                            src="assets/video/match.mp4"
+                            type="video/mp4"
+                            media="screen and (max-width: 750px;)"
+                        )
+                        source(
+                            src="assets/video/match.ogg"
+                            type="video/ogg"
+                            media="screen and (max-width: 750px;)"
+                        )
+                        source(
+                            src="assets/video/match.mp4"
+                            type="video/mp4"
+                        )
+                        source(
+                            src="assets/video/match.ogg"
+                            type="video/ogg"
+                        )
                 .col-md-6
                     a.link.link_upper(href="#") WHAT IT DOES
-                    h3.technical-properties__title An Enhanced Football Experience
+                    h2.title.technical-properties__title An Enhanced Football Experience
                     p.technical-properties__description The Guardian Live Scores app is your go to app for live scores and watching Premier League goals… Get in there, what a result!
                     p.technical-properties__description As well as videos of all the goals, you can watch match highlights, check out the latest scores and results and stay bang-up-to-date with the big football stories from The Guardian publication.
-                    a.link Learn more
+                    a.link(href="#") Learn more
     .container-fluid.circle-bg-wrapper
         section.ux-friendly.container
-            .row
+            .row.row-ux-friendly
                 .col-md-6
                     a.link.link_upper(href="#") GET STARTED
-                    h3.ux-friendly__title User-friendly Interface
+                    h2.title.ux-friendly__title User-friendly Interface
                     p.ux-friendly__description The in-game goal clips from every Premier League match are available to Guardian TV customers with a Guardian subscription.
                     p.ux-friendly__description So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you, you can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
                     a.link Learn more
-                .col-md-6
+                .col-md-6.col-ux-friendly
                     .ux-friendly__example
                         img.ux-friendly__img(
+                            sizes=(
+                                `(min-width: 751px) 353px,
+                                 (min-width: 320px) 200px`
+                            )
+                            srcset=(
+                                `assets/img/ux-example-200w.png 200w,
+                                assets/img/ux-example-353w.png 353w`
+                            )
                             src="assets/img/ux-example.png"
-                        )
-                        span.ux-friendly__circle
+                            alt="example")
+                        span.ux-friendly__circle.ux-friendly__circle_download
                             svg.ux-friendly__icon.ux-friendly__icon_download
                                 use(
                                     xlink:href="#icon-download-example"
@@ -224,7 +253,7 @@ block main
                                     xlink:href="#icon-notification-example"
                                 )
                             span.ux-friendly__badges 7
-                        span.ux-friendly__circle
+                        span.ux-friendly__circle.ux-friendly__circle_cart
                             svg.ux-friendly__icon.ux-friendly__icon_cart
                                 use(
                                     xlink:href="#icon-cart"
@@ -233,16 +262,16 @@ block main
 
     .container-fluid.features-bg-wrapper
         section.features.container
-            h2.features__title Features That Will Tailor Your Experience
+            h2.title.features__title Features That Will Tailor Your Experience
             .features__inner
-                .row
+                .row.row-features-top
                     .col-md-4
                         +features__item ("#icon-video", "Video highlights for every Premier League and English Football League game")
                     .col-md-4
                         +features__item ("#icon-notification", "Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky TV subscribers with Guardian.")
                     .col-md-4
                         +features__item ("#icon-hd", "Notifications for your teams, including in-game goal clips and Premier League match highlights for Sky TV subscribers with Guardian.")
-                .row
+                .row.row-features-center
                     .col-md-4
                         +features__item ("#icon-flag", "Match pages showing live scores, commentary, team line-ups and enhanced match stats to keep you up-to-date on all the action")
                     .col-md-4
@@ -259,24 +288,25 @@ block main
 
     .container-fluid
         section.comments
+            h2.title.comments__title What Our Users Say
             <div class="swiper-container">
             <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-1.png","Noah Jackson","I use this app every day and it's a great way to keep up to date with what's going on in football. It's a shame it won't rotate into landscape mode like its main competitor")
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-2.png","Darren Wilson","Good for scores and commentary but the team lineups have stopped working.")
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-3.png","Michael Akinuli","Good for watching the goals and great for highlights instead of waiting till 10:30 before you can watch highlights on March of the day also no need of sky go")
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-4.png","Sarah Udoma","This app has videos for other premier league teams who play and it also gives me nofications when my favourite team plays")
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-2.png","Darren Wilson","Good for scores and commentary but the team lineups have stopped working.")
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-comments">
             +comment ("assets/img/avatar-3.png","Noah Jackson","I use this app every day and it's a great way to keep up to date with what's going on in football. It's a shame it won't rotate into landscape mode like its main competitor")
             </div>"
             </div>
@@ -290,7 +320,7 @@ block main
 
 
     .brand.container
-        h2.brand__title We have been featured in
+        h2.title.brand__title We have been featured in
         .row
             .col-lg-2.col-md-6.col-6
                 img.brand__img(
@@ -322,7 +352,7 @@ block main
         )
         .offer.container
             .offer__inner
-                h2.offer__title Get Up Close With Your Team
+                h2.title.offer__title Get Up Close With Your Team
                 p.offer__description If you’re interested in the scores of more than one team (it’s OK, we won’t tell your mates you support two clubs!), you can choose the scores and competitions that matter to you using the ‘My Scores’ section. So, make sure you’re a top-flight football fan by downloading the Football Score Centre now. It’s got all this:
                 .application-store
                     a.link(
