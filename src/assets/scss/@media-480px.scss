@@ -1,0 +1,64 @@
+@media screen and (max-width: 480px) {
+  .linear-bg-wrapper {
+    background: linear-gradient(to bottom, #fff 50%, hsla(0, 0%, 100%, 0) 100%, hsla(0, 0%, 100%, .5)), url(../../assets/img/technical-property-bg.png) no-repeat 0 100%;
+  }
+
+  .notification {
+    max-width: 247px;
+
+    &__time,
+    &__teams,
+    &__match {
+      font-size: $font-xs;
+    }
+    &-emblems__item {
+      max-width: 57px;
+      &_size {
+        max-width: 48px;
+      }
+    }
+    &-col {
+      align-items: center;
+    }
+  }
+
+  .technical-properties {
+    padding: 54px 0 40px;
+  }
+
+  .player {
+    max-width: 247px;
+    height: 150px;
+  }
+
+  .row-notification__top {
+    padding: 18px 15px 16px;
+  }
+
+  .row-notification__bottom {
+    padding: 5px 10px;
+  }
+
+
+  .form-check-label__notification {
+    font-size: 13px;
+  }
+
+  .ux-friendly__description:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  .offer-wrapper {
+    background-size: 100%;
+    min-height: auto;
+  }
+
+  .application-store__img {
+    max-width: 145px;
+  }
+
+  .offer {
+    padding: 0 0 300px;
+  }
+
+}

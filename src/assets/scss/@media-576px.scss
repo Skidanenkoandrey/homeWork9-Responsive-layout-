@@ -1,0 +1,28 @@
+@media screen and (max-width: 576px) {
+  .circle-bg-wrapper {
+    background: url(../../assets/img/ux-friendly-mobile.png) no-repeat 50% 120%;
+    background-size: auto;
+  }
+
+  .ux-friendly__circle {
+    width: 72px;
+    height: 72px;
+  }
+
+  .ux-friendly__icon_notification {
+    width: 30px;
+  }
+
+  .ux-friendly__circle_cart {
+    display: flex;
+  }
+
+  .ux-friendly__badges_bg {
+    background: #40B756;
+  }
+
+  .ux-friendly__circle_download {
+    display: none;
+  }
+
+}

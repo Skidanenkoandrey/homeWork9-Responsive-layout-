@@ -9,6 +9,7 @@
 
 html {
   a {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
   }
@@ -72,6 +73,13 @@ body {
   & .link:first-child {
     margin-right: 36px;
   }
+
+  &__link {
+    &:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(0 2px 4px $dark);
+    }
+  }
 }
 
 .row {
@@ -81,6 +89,7 @@ body {
 
   &-notification__top {
     padding: 27px 15px 16px;
+    text-align: left;
   }
 
   &-notification__bottom {
@@ -186,6 +195,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
     padding: 0;
   }
 
@@ -259,7 +269,8 @@ body {
       top: 10%;
     }
 
-    &_download {
+    &_download,
+    &_cart{
       bottom: 25%;
       right: -5%;
     }
@@ -300,7 +311,24 @@ body {
   }
 
   &__text {
+    position: relative;
     margin-top: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      width: 5px;
+      height: 5px;
+      margin-right: 5px;
+      background: #fff;
+      border-radius: 100%;
+    }
+
+    &::first-letter {
+      padding-left: 15px;
+    }
   }
 }
 
@@ -406,5 +434,99 @@ body {
 
 .social-network__icon {
   max-width: 15px;
+  height: 15px;
 }
 
+.brand {
+  text-align: center;
+  &__img {
+    max-width: 100%;
+    cursor: pointer;
+
+    &:hover {
+      filter: drop-shadow(2px 2px 6px $dark);
+    }
+  }
+}
+
+
+.offer-wrapper {
+  background: url("../../assets/img/offer-img.png") no-repeat left bottom;
+}
+
+.offer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 100px 0;
+
+  &__inner {
+    max-width: 535px;
+  }
+
+  &__title,
+  &__description {
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    font-size: $font-m;
+    line-height: 25px;
+  }
+}
+
+
+.footer {
+  padding: 50px 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 36px;
+  }
+
+  &__link {
+    color: $light;
+    font-weight: 700;
+
+    &:hover {
+      color: rgba($light, .5);
+    }
+  }
+}
+
+.social-icon {
+  fill: $secondary-color;
+}
+
+.social-network {
+  display: flex;
+  justify-content: space-between;
+  max-width: 110px;
+
+  &__link {
+    background: $light;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+
+@import "@media-1240px";
+@import "@media-992px";
+@import "@media-768px";
+@import "@media-576px";
+@import "@media-480px";

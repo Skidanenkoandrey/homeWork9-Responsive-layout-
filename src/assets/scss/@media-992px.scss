@@ -1,0 +1,25 @@
+@media screen and (max-width: 992px) {
+
+  .linear-bg-wrapper {
+    background: linear-gradient(270deg, #fff 22%, hsla(0, 0%, 100%, 0) 100%, hsla(0, 0%, 100%, .5)), url(../../assets/img/technical-property-bg.png) no-repeat 0 100%;
+  }
+
+  .technical-properties {
+    padding: 54px 0 120px;
+  }
+  .notification-col {
+    order: 2;
+    text-align: center;
+    margin-top: 92px;
+    width: 100%;
+  }
+
+  .brand {
+    &__img {
+      margin-bottom: 30px;
+    }
+    .col-12 .brand__img {
+      margin-bottom: 0;
+    }
+  }
+}

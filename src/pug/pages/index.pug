@@ -117,7 +117,7 @@ block svg-sprite
             viewBox="0 0 15 15"
             xmlns="http://www.w3.org/2000/svg"
         )
-            path.icon(
+            path.social-icon(
                 d="M11.8136 0.467224H3.18478C1.68556 0.467224 0.466797 1.68676 0.466797 3.18521V11.8149C0.466797 13.3141 1.68634 14.5329 3.18478 14.5329H11.8145C13.3137 14.5329 14.5325 13.3134 14.5325 11.8149V3.18521C14.5324 1.68676 13.3129 0.467224 11.8136 0.467224ZM12.6699 2.0399L12.9777 2.03913V4.37351L10.6262 4.38132L10.6184 2.04694L12.6699 2.0399ZM7.49964 5.14689C9.45042 5.14689 9.85273 6.97813 9.85273 7.50075C9.85273 8.79684 8.7965 9.85307 7.49964 9.85307C6.20201 9.85307 5.14655 8.79684 5.14655 7.50075C5.14569 6.97813 5.54886 5.14689 7.49964 5.14689ZM12.991 11.6446C12.991 12.3876 12.3871 12.9922 11.6426 12.9922H3.33007C2.58629 12.9922 1.98163 12.3883 1.98163 11.6446V5.93443H3.93473C3.75349 6.3805 3.65111 6.98989 3.65111 7.50084C3.65111 9.62119 5.37611 11.347 7.49723 11.347C9.61836 11.347 11.3425 9.62119 11.3425 7.50084C11.3425 6.98989 11.2401 6.3805 11.0597 5.93443H12.9893V11.6446H12.991Z"
             )
 
@@ -125,7 +125,7 @@ block svg-sprite
             viewBox="0 0 7 13"
             xmlns="http://www.w3.org/2000/svg"
         )
-            path.icon(
+            path.social-icon(
                 d="M5.02147 2.6054H6.63242V0.225708H4.7387V0.23429C2.44414 0.315558 1.97387 1.60538 1.93242 2.96008H1.9277V4.14838H0.365234V6.47882H1.9277V12.7257H4.28242V6.47882H6.21132L6.58393 4.14838H4.28319V3.43044C4.28319 2.97261 4.58784 2.6054 5.02147 2.6054Z"
             )
 
@@ -134,7 +134,7 @@ block svg-sprite
             viewBox="0 0 15 12"
             xmlns="http://www.w3.org/2000/svg"
         )
-            path.icon(
+            path.social-icon(
                 d="M15 1.42062C14.4422 1.66154 13.8478 1.82123 13.2281 1.89877C13.8656 1.524 14.3522 0.935077 14.5809 0.225231C13.9866 0.574154 13.3303 0.820615 12.6309 0.958154C12.0666 0.366462 11.2622 0 10.3847 0C8.68219 0 7.31156 1.36062 7.31156 3.02862C7.31156 3.26862 7.33219 3.49938 7.38281 3.71908C4.82625 3.59631 2.56406 2.38985 1.04437 0.552C0.779062 1.00523 0.623438 1.524 0.623438 2.08246C0.623438 3.13108 1.17188 4.06062 1.98937 4.59877C1.49531 4.58954 1.01063 4.44831 0.6 4.22585C0.6 4.23508 0.6 4.24708 0.6 4.25908C0.6 5.73046 1.66594 6.95262 3.06375 7.23415C2.81344 7.30154 2.54063 7.33385 2.2575 7.33385C2.06063 7.33385 1.86187 7.32277 1.67531 7.28215C2.07375 8.48123 3.20438 9.36277 4.54875 9.39138C3.5025 10.1972 2.17406 10.6828 0.735938 10.6828C0.48375 10.6828 0.241875 10.6717 0 10.6412C1.36219 11.5062 2.97656 12 4.7175 12C10.3763 12 13.47 7.38462 13.47 3.384C13.47 3.25015 13.4653 3.12092 13.4587 2.99262C14.0691 2.56615 14.5819 2.03354 15 1.42062Z"
             )
 
@@ -152,13 +152,13 @@ block header
                     h1.header__title Get a personalized football experience tailored just for you
                     p.header__description Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
                     .application-store
-                        a.link(
+                        a.link.application-store__link(
                             href="#"
                         )
                             img.application-store__img(
                                 src="assets/img/apple-store.png"
                             )
-                        a.link(
+                        a.link.application-store__link(
                             href="#"
                         )
                             img.application-store__img(
@@ -176,7 +176,7 @@ block main
                                 p.notification__teams Arsenal v Chelsea
                                 p.notification__match Friendly Match
                             .col-6.notification-emblems
-                                img.notification-emblems__item(
+                                img.notification-emblems__item.notification-emblems__item_size(
                                     src="assets/img/arsenal-fc.png"
                                 )
                                 img.notification-emblems__item(
@@ -190,7 +190,7 @@ block main
                                         type="checkbox"
                                         id="flexSwitchCheckDefault"
                                     )
-                                    label.form-check-label(
+                                    label.form-check-label.form-check-label__notification(
                                         for="flexSwitchCheckDefault"
                                     ) Turn on all match notifications
                     video.player(
@@ -214,7 +214,7 @@ block main
                             src="assets/video/match.ogg"
                             type="video/ogg"
                         )
-                .col-md-6
+                .col-lg-6
                     a.link.link_upper(href="#") WHAT IT DOES
                     h2.title.technical-properties__title An Enhanced Football Experience
                     p.technical-properties__description The Guardian Live Scores app is your go to app for live scores and watching Premier League goals… Get in there, what a result!
@@ -223,13 +223,13 @@ block main
     .container-fluid.circle-bg-wrapper
         section.ux-friendly.container
             .row.row-ux-friendly
-                .col-md-6
+                .col-sm-6
                     a.link.link_upper(href="#") GET STARTED
                     h2.title.ux-friendly__title User-friendly Interface
                     p.ux-friendly__description The in-game goal clips from every Premier League match are available to Guardian TV customers with a Guardian subscription.
                     p.ux-friendly__description So, if you’re not a subscriber, now’s the time to make that savvy call. If that’s a step too far for you, you can still watch loads of firecracker Premier League action as long as you sign in with a free Guardian iD.
                     a.link Learn more
-                .col-md-6.col-ux-friendly
+                .col-sm-6.col-ux-friendly
                     .ux-friendly__example
                         img.ux-friendly__img(
                             sizes=(
@@ -258,7 +258,7 @@ block main
                                 use(
                                     xlink:href="#icon-cart"
                                 )
-                            span.ux-friendly__badges 7
+                            span.ux-friendly__badges.ux-friendly__badges_bg 7
 
     .container-fluid.features-bg-wrapper
         section.features.container
@@ -278,7 +278,7 @@ block main
                         +features__item ("#icon-picture", "The new picture in picture video mode means you can watch goals, manager interviews and more whilst using other areas of the app – so you don’t need to miss any of the action")
                     .col-md-4
                         +features__item ("#icon-reports", "Live updated league tables including all the domestic, European and major leagues and tournaments")
-                .row
+                .row.row-features-bottom
                     .col-md-4
                         +features__item ("#icon-download", "The Guardian News Vidiprinter. Follow the goals as they go in with our new and improved Vidiprinter")
                     .col-md-4
@@ -346,22 +346,19 @@ block main
                 img.brand__img(
                     src="assets/img/sky-sports.png"
                 )
-    .container-fluid
-        img.offer__img(
-            src="assets/img/offer-img.png"
-        )
+    .container-fluid.offer-wrapper
         .offer.container
             .offer__inner
                 h2.title.offer__title Get Up Close With Your Team
                 p.offer__description If you’re interested in the scores of more than one team (it’s OK, we won’t tell your mates you support two clubs!), you can choose the scores and competitions that matter to you using the ‘My Scores’ section. So, make sure you’re a top-flight football fan by downloading the Football Score Centre now. It’s got all this:
                 .application-store
-                    a.link(
+                    a.link.application-store__link(
                         href="#"
                     )
                         img.application-store__img(
                             src="assets/img/apple-store.png"
                         )
-                    a.link(
+                    a.link.application-store__link(
                         href="#"
                     )
                         img.application-store__img(
@@ -370,13 +367,13 @@ block main
 block footer
     .container-fluid.footer-wrapper
         footer.footer.container
-            .row
-                .col-md-1
+            .row.row-footer
+                .col-md-2.col-logo
                     a.logo(href="#")
                         img.logo__img(
-                            src="assets/img/logo.svg"
+                            src="assets/img/logo-footer.svg"
                         )
-                .col-md-10
+                .col-md-8.col-navigation
                     nav.navigation
                         ul.navigation__list
                             li.navigation__item
@@ -395,23 +392,23 @@ block footer
                                 a.navigation__link(
                                     href="#"
                                 ) Privacy
-                .col-md-1
+                .col-md-2.col-social
                     .social-network
-                        a.link(
+                        a.link.social-network__link(
                             href="#"
                         )
                             svg.social-network__icon
                                 use(
                                     xlink:href="#icon-footer-twitter"
                                 )
-                        a.link(
+                        a.link.social-network__link(
                             href="#"
                         )
                             svg.social-network__icon
                                 use(
                                     xlink:href="#icon-footer-facebook"
                                 )
-                        a.link(
+                        a.link.social-network__link(
                             href="#"
                         )
                             svg.social-network__icon
