@@ -108,7 +108,65 @@ body {
 
   &-comments-top {
     margin-bottom: 18px;
+    align-items: center;
   }
+}
+
+
+.swiper-button-next_custom,
+.swiper-button-prev_custom {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 47px;
+  transition: 0.2s;
+}
+
+.swiper-button-next_custom:hover,
+.swiper-button-prev_custom:hover {
+  filter: drop-shadow(0px 10px 4px rgba($dark,.35));
+  transition: 0.2s;
+}
+
+
+.swiper-button-next_custom {
+  right: 25px;
+}
+
+.swiper-button-prev_custom {
+  left: 25px;
+}
+
+.slider-bg {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 1;
+
+  &_right {
+    right: 0;
+    background: linear-gradient(270deg, #fff 49.84%, hsla(0, 0%, 100%, 0) 126.7%);
+  }
+
+  &_left {
+    left: 0;
+    background: linear-gradient(270deg, #FFFFFF 49.84%, rgba(255, 255, 255, 0) 126.7%);
+    transform: rotate(180deg);
+  }
+}
+
+
+.swiper-button-next_custom::after,
+.swiper-button-prev_custom::after {
+  font-size: 20px;
+  width: 47px;
+  height: 47px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00ADEE;
+  border-radius: 100%;
 }
 
 
@@ -205,6 +263,39 @@ body {
   }
 }
 
+
+.form-check-input_switch::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 12px;
+  top: -6px;
+  background: url(../../assets/img/switch-button.svg);
+  transition: 0.2s ease-in-out;
+}
+
+.form-switch .form-check-input_switch:focus {
+  background-image: none;
+}
+
+.form-switch .form-check-input_switch {
+  position: relative;
+  background-image: none;
+  background-color: #979797;
+  height: 12px;
+}
+
+.form-switch .form-check-input_switch:checked {
+  background-image: none;
+}
+
+.form-switch .form-check-input_switch:checked::before {
+  right: -6px;
+  transition: 0.2s ease-in-out;
+}
+
+
 .player {
   max-width: 360px;
   width: 100%;
@@ -270,7 +361,7 @@ body {
     }
 
     &_download,
-    &_cart{
+    &_cart {
       bottom: 25%;
       right: -5%;
     }
@@ -346,16 +437,23 @@ body {
 
   &__item {
     max-width: 310px;
+    text-align: left;
   }
 
   &__text {
     font-size: $font-s;
   }
 
+  &__avatar {
+    margin-right: 11px;
+  }
+
   &__name {
     font-size: $font-m;
     line-height: 20px;
     font-weight: 700;
+    margin: 0;
+    margin-left: 11px;
   }
 }
 
@@ -439,6 +537,7 @@ body {
 
 .brand {
   text-align: center;
+
   &__img {
     max-width: 100%;
     cursor: pointer;

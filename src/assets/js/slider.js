@@ -7,12 +7,19 @@ const swiper = new Swiper('.swiper-container', {
     },
     breakpoints: {
         // when window width is >= 320px
-        900: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+        },
+        1300: {
             slidesPerView: 5,
             spaceBetween: 30,
             slidesPerGroup: 1,
-        }
+        },
     },
+
+
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {

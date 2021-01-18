@@ -186,7 +186,7 @@ block main
                         .row.row-notification__bottom
                             .col
                                 .form-check.form-switch.notification-switch.notification-switch_revers
-                                    input.form-check-input(
+                                    input.form-check-input.form-check-input_switch(
                                         type="checkbox"
                                         id="flexSwitchCheckDefault"
                                     )
@@ -313,8 +313,12 @@ block main
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            .slider-bg.slider-bg_left
+            .slider-bg.slider-bg_right
+            <div class="swiper-button-next swiper-button-next_custom">
+            </div>
+            <div class="swiper-button-prev swiper-button-prev_custom">
+            </div>
             </div>
 
 

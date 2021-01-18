@@ -61,4 +61,23 @@
     padding: 0 0 300px;
   }
 
+  .comments__item {
+    max-width: 250px;
+  }
+
+  .swiper-button-next_custom {
+    right: 0;
+  }
+
+  .swiper-button-prev_custom {
+    left: 0;
+  }
+
+  .swiper-button-next_custom::after,
+  .swiper-button-prev_custom::after {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
 }
