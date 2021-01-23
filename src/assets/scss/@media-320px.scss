@@ -2,4 +2,15 @@
   .navigation__item:not(:last-child) {
     margin-right: 10px;
   }
+
+  .application-store {
+    justify-content: space-between;
+    &__img {
+      max-width: 100%;
+    }
+  }
+
+  .application-store__img {
+    max-width: 100%;
+  }
 }
